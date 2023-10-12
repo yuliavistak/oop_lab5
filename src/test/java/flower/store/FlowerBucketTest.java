@@ -32,50 +32,58 @@ public class FlowerBucketTest {
 
     @Test
     public void testAdd() {
-        FlowerBucket flowerBucket2 = new FlowerBucket();
+        FlowerBucket flowerBucketB = new FlowerBucket();
         Assertions.assertEquals(flowerBucket2.getPacks().size(), 0);
 
-        Flower flower1 = new Flower();
-        Flower flower2 = new Flower();
-        Flower flower3 = new Flower();
+        Flower flowerA = new Flower();
+        Flower flowerB = new Flower();
+        Flower flowerC = new Flower();
 
-        FlowerPack flowerPack1 = new FlowerPack(flower1, 5);
-        FlowerPack flowerPack2 = new FlowerPack(flower2, 2);
-        FlowerPack flowerPack3 = new FlowerPack(flower3, 10);
-        flowerBucket2.add(flowerPack1);
-        flowerBucket2.add(flowerPack2);
-        flowerBucket2.add(flowerPack3);
-        Assertions.assertEquals(flowerBucket2.getPacks().size(), 3);
+        int quantityA = 5;
+        int quantityB = 2;
+        int quantityC = 10;        
+        FlowerPack flowerPackA = new FlowerPack(flowerA, quantityA);
+        FlowerPack flowerPackB = new FlowerPack(flowerB, quantityB);
+        FlowerPack flowerPackC = new FlowerPack(flowerC, quantityC);
+        flowerBucketB.add(flowerPackA);
+        flowerBucketB.add(flowerPackB);
+        flowerBucketB.add(flowerPackC);
+        int size = 3;
+        Assertions.assertEquals(flowerBucketB.getPacks().size(), size);
     }
 
     @Test
 
     public void testGetPacks() {
 
-        Flower flower1 = new Flower();
-        Flower flower2 = new Flower();
-        Flower flower3 = new Flower();
+        Flower flowerA = new Flower();
+        Flower flowerB = new Flower();
+        Flower flowerC = new Flower();
 
-        flower2.setColor(FlowerColor.RED);
-        FlowerPack flowerPack1 = new FlowerPack(flower1, 5);
-        FlowerPack flowerPack2 = new FlowerPack(flower2, 2);
-        FlowerPack flowerPack3 = new FlowerPack(flower3, 10);
-        
-        flower1.setPrice(13.5);
-        flowerBucket.add(flowerPack1);
-        flowerBucket.add(flowerPack2);
-        flowerBucket.add(flowerPack3);
+        flowerB.setColor(FlowerColor.RED);
+        int quantityA = 5;
+        int quantityB = 2;
+        int quantityC = 10;        
+        FlowerPack flowerPackA = new FlowerPack(flowerA, quantityA);
+        FlowerPack flowerPackB = new FlowerPack(flowerB, quantityB);
+        FlowerPack flowerPackC = new FlowerPack(flowerC, quantityC);
+
+        double newprice = 13.5;
+        flower1.setPrice(newprice);
+        flowerBucket.add(flowerPackA);
+        flowerBucket.add(flowerPackB);
+        flowerBucket.add(flowerPackC);
         List<FlowerPack> lstPacks = flowerBucket.getPacks();
         Flower flowerFromBucket = lstPacks.get(1).getFlower();
-        Flower flowerFromBucket2 = lstPacks.get(0).getFlower();
+        Flower flowerFromBucketB = lstPacks.get(0).getFlower();
 
 
         Assertions.assertEquals(flowerFromBucket.getColor(), "#FF0000");
-        Assertions.assertEquals(flowerFromBucket2.getPrice(), 0);
+        Assertions.assertEquals(flowerFromBucketB.getPrice(), 0);
     }
     
     @Test
-    public void testGetPrice(){
+    public void testGetPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
         Flower flower = new Flower();
@@ -83,7 +91,8 @@ public class FlowerBucketTest {
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);
 
-        flower.setPrice(101.6);
+        double newprice = 101.6;
+        flower.setPrice(newprice);
         Assertions.assertEquals(flowerBucket.getPrice(), price*quantity);
 
     }
