@@ -18,7 +18,6 @@ public class FlowerPack {
         }
         else{
             this.quantity = quantity;
-        }
     }
 
     public double getPrice() {
