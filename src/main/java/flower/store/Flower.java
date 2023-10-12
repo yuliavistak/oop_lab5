@@ -16,9 +16,9 @@ public class Flower {
 
     }
 
-    private FlowerColor color;
     private double price;
     private double sepalLength;
+    private FlowerColor color;
     private FlowerType flowerType;
 
     public double getPrice() {

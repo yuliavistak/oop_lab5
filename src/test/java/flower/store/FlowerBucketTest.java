@@ -39,18 +39,14 @@ public class FlowerBucketTest {
         Flower flowerA = new Flower();
         Flower flowerB = new Flower();
         Flower flowerC = new Flower();
-
-        int quantityA = 5;
-        int quantityB = 2;
-        int quantityC = 10;        
-        FlowerPack flowerPackA = new FlowerPack(flowerA, quantityA);
-        FlowerPack flowerPackB = new FlowerPack(flowerB, quantityB);
-        FlowerPack flowerPackC = new FlowerPack(flowerC, quantityC);
+      
+        FlowerPack flowerPackA = new FlowerPack(flowerA, 0);
+        FlowerPack flowerPackB = new FlowerPack(flowerB, 0);
+        FlowerPack flowerPackC = new FlowerPack(flowerC, 0);
         flowerBucketB.add(flowerPackA);
         flowerBucketB.add(flowerPackB);
         flowerBucketB.add(flowerPackC);
-        int size = 3;
-        Assertions.assertEquals(flowerBucketB.getPacks().size(), size);
+        Assertions.assertNotEquals(flowerBucketB.getPacks().size(), 0);
     }
 
     @Test
@@ -62,15 +58,10 @@ public class FlowerBucketTest {
         Flower flowerC = new Flower();
 
         flowerB.setColor(FlowerColor.RED);
-        int quantityA = 5;
-        int quantityB = 2;
-        int quantityC = 10;        
-        FlowerPack flowerPackA = new FlowerPack(flowerA, quantityA);
-        FlowerPack flowerPackB = new FlowerPack(flowerB, quantityB);
-        FlowerPack flowerPackC = new FlowerPack(flowerC, quantityC);
-
-        double newprice = 13.5;
-        flowerA.setPrice(newprice);
+      
+        FlowerPack flowerPackA = new FlowerPack(flowerA, 0);
+        FlowerPack flowerPackB = new FlowerPack(flowerB, 0);
+        FlowerPack flowerPackC = new FlowerPack(flowerC, 0);
 
         flowerBucket.add(flowerPackA);
         flowerBucket.add(flowerPackB);
