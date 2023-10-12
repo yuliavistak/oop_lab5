@@ -77,15 +77,15 @@ public class FlowerBucketTest {
     
     @Test
     public void testGetPrice() {
-        int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
-        Flower flower = new Flower();
-        flower.setPrice(price);
-        FlowerPack flowerPack = new FlowerPack(flower, quantity);
+        int price = MAX_PRICE;
+        int quantity = MAX_QUANTITY;
+        Flower rose = new Flower();
+        rose.setPrice(price);
+        FlowerPack flowerPack = new FlowerPack(rose, quantity);
         flowerBucket.add(flowerPack);
 
         double newprice = MAX_PRICE + 1;
-        flower.setPrice(newprice);
+        rose.setPrice(newprice);
         Assertions.assertEquals(flowerBucket.getPrice(), price*quantity);
 
     }
