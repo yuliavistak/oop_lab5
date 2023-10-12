@@ -33,7 +33,7 @@ public class FlowerTest {
     @Test
     public void testPriceSecond() {
         Flower flowerSecond = new Flower(MAX_PRICE, 
-                MAX_PRICE, FlowerColor.GREEN, FlowerType.CHAMOMILE); 
+                FlowerColor.GREEN, MAX_PRICE, FlowerType.CHAMOMILE); 
 
         int price = MAX_PRICE;
         flower.setPrice(price);
@@ -47,7 +47,7 @@ public class FlowerTest {
         double pr = 0.0;
         double len = 0.0;
         FlowerType t = FlowerType.TULIP;
-        Flower flowerThird = new Flower(len, pr, colorT, t); 
+        Flower flowerThird = new Flower(len, colorT, pr, t); 
         Assertions.assertNotEquals(flowerThird.getClass(), flower.getColor());
 
     }

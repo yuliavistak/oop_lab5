@@ -84,7 +84,7 @@ public class FlowerBucketTest {
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);
 
-        double newprice = 101.6;
+        double newprice = MAX_PRICE + 1;
         flower.setPrice(newprice);
         Assertions.assertEquals(flowerBucket.getPrice(), price*quantity);
 
