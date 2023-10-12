@@ -14,7 +14,7 @@ public class FlowerBucket extends Item{
         return price;
     }
 
-    public void add(FlowerPack flowerPack){
+    public void add(FlowerPack flowerPack) {
         flowerPacks.add(flowerPack);
     }
 
