@@ -43,6 +43,7 @@ public class FlowerTest {
     public void testColorSecond() {
         FlowerColor color = FlowerColor.YELLOW;
         flower.setColor(color);
+
         FlowerColor colorT = FlowerColor.GREEN;
         double pr = 0.0;
         double len = 0.0;

@@ -33,13 +33,14 @@ public class FlowerBucketTest {
     @Test
     public void testAdd() {
         FlowerBucket flowerBucketB = new FlowerBucket();
+
         Assertions.assertEquals(flowerBucketB.getPacks().size(), 0);
 
 
         Flower flowerA = new Flower();
         Flower flowerB = new Flower();
         Flower flowerC = new Flower();
-      
+
         FlowerPack flowerPackA = new FlowerPack(flowerA, 0);
         FlowerPack flowerPackB = new FlowerPack(flowerB, 0);
         FlowerPack flowerPackC = new FlowerPack(flowerC, 0);
@@ -58,6 +59,7 @@ public class FlowerBucketTest {
         Flower flowerC = new Flower();
 
         flowerB.setColor(FlowerColor.RED);
+
       
         FlowerPack flowerPackA = new FlowerPack(flowerA, 0);
         FlowerPack flowerPackB = new FlowerPack(flowerB, 0);
