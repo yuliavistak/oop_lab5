@@ -8,18 +8,17 @@ import lombok.ToString;
 @Getter@AllArgsConstructor@ToString@NoArgsConstructor
 public class Flower {
 
-    public Flower(Flower flower) {
-        this.color = flower.color;
-        this.price = flower.price;
-        this.sepalLength = flower.sepalLength;
-        this.flowerType = flower.flowerType;
-
-    }
-
+    private double sepalLength;
     private FlowerColor color;
     private double price;
-    private double sepalLength;
     private FlowerType flowerType;
+
+    public Flower(Flower flower) {
+        this.flowerType = flower.flowerType;
+        this.price = flower.price;
+        this.sepalLength = flower.sepalLength;
+        this.color = flower.color;
+    }
 
     public double getPrice() {
         return this.price;
@@ -34,6 +33,6 @@ public class Flower {
     }
 
     public String getColor() {
-        return this.color.colorCode;
+        return this.color.getCode();
     }
 }

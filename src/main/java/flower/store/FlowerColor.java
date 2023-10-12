@@ -12,6 +12,10 @@ public enum FlowerColor {
         this.colorCode = colorCode;
     }
 
+    public String getCode() {
+        return this.colorCode;
+    }
+
     public boolean hasThisColor(String otherColor) {
         return colorCode.equals(otherColor);
     }
