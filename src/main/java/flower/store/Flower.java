@@ -16,24 +16,24 @@ public class Flower {
 
     }
 
+    private FlowerColor color;
     private double price;
     private double sepalLength;
-    private FlowerColor color;
     private FlowerType flowerType;
 
-    public double getPrice(){
+    public double getPrice() {
         return this.price;
     }
 
-    public void setPrice(double newprice){
+    public void setPrice(double newprice) {
         this.price = newprice;
     }
 
-    public void setColor(FlowerColor newcolor){
+    public void setColor(FlowerColor newcolor) {
         this.color = newcolor;
     }
 
-    public String getColor(){
-        return this.color.colorCode;
+    public String getColor() {
+        return this.color.getCode();
     }
 }
