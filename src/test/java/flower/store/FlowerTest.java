@@ -18,33 +18,32 @@ public class FlowerTest {
     }
 
     @Test
-    public void testPrice1() {
+    public void testPriceFirst() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         flower.setPrice(price);
         Assertions.assertEquals(price, flower.getPrice());
     }
 
     @Test
-    public void testColor1() {
+    public void testColorFirst() {
         FlowerColor color = FlowerColor.RED;
         flower.setColor(color);
         Assertions.assertEquals("#FF0000", flower.getColor());
     }
     @Test
-    public void testPrice2() {
-        Flower flower2 = new Flower(MAX_PRICE, MAX_PRICE, FlowerColor.GREEN, FlowerType.CHAMOMILE); 
+    public void testPriceSecond() {
+        Flower flowerSecond = new Flower(MAX_PRICE, MAX_PRICE, 
+                                    FlowerColor.GREEN, FlowerType.CHAMOMILE); 
         int price = MAX_PRICE;
         flower.setPrice(price);
         Assertions.assertEquals(flower.getPrice(), flower2.getPrice());
     }    
     @Test
-    public void testColor2() {
+    public void testColorSecond() {
         FlowerColor color = FlowerColor.YELLOW;
         flower.setColor(color);
-        Flower flower3 = new Flower(0.0, 4.3, FlowerColor.GREEN, FlowerType.TULIP); 
+        Flower flowerThird = new Flower(0.0, 0.0, 
+                                        FlowerColor.GREEN, FlowerType.TULIP); 
         Assertions.assertNotEquals(flower3.getClass(), flower.getColor());
     }
-
-
-    
 }
