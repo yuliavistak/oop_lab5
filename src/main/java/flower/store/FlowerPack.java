@@ -21,10 +21,10 @@ public class FlowerPack {
         }
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return quantity * flower.getPrice();
     }
-    public Flower getFlower(){
+    public Flower getFlower() {
         return this.flower;
     }
 }
