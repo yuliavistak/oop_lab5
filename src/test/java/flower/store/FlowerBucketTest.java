@@ -35,6 +35,7 @@ public class FlowerBucketTest {
         FlowerBucket flowerBucketB = new FlowerBucket();
         Assertions.assertEquals(flowerBucketB.getPacks().size(), 0);
 
+
         Flower flowerA = new Flower();
         Flower flowerB = new Flower();
         Flower flowerC = new Flower();
@@ -70,6 +71,7 @@ public class FlowerBucketTest {
 
         double newprice = 13.5;
         flowerA.setPrice(newprice);
+
         flowerBucket.add(flowerPackA);
         flowerBucket.add(flowerPackB);
         flowerBucket.add(flowerPackC);

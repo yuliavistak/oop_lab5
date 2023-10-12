@@ -35,5 +35,6 @@ public class Flower {
 
     public String getColor() {
         return this.color.getCode();
+
     }
 }
